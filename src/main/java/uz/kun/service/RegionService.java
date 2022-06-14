@@ -2,6 +2,7 @@ package uz.kun.service;
 
 import uz.kun.dto.RegionDto;
 import uz.kun.entity.RegionEntity;
+import uz.kun.enums.Lang;
 import uz.kun.exps.AlreadyExist;
 import uz.kun.exps.BadRequestException;
 import uz.kun.exps.ItemNotFoundException;
@@ -130,5 +131,37 @@ public class RegionService {
         region.setVisible(Boolean.FALSE);
 
         regionRepository.save(region);
+    }
+
+    public List<RegionDto> getListByLang(Lang lang) {
+
+        Iterable<RegionEntity> all = regionRepository.findAll();
+        List<RegionDto> dtoList = new LinkedList<>();
+
+        all.forEach(regionEntity -> {
+            RegionDto dto = new RegionDto();
+            switch (lang) {
+                case ru -> {
+                    dto.setName(regionEntity.getNameRu());
+                    break;
+                }
+                case en -> {
+                    dto.setName(regionEntity.getNameEn());
+                    break;
+                }
+                case uz -> {
+                    dto.setName(regionEntity.getNameUz());
+                    break;
+                }
+                default -> dto.setName(regionEntity.getNameUz());
+            }
+            dtoList.add(dto);
+        });
+        return dtoList;
+
+
+
+
+
     }
 }

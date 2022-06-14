@@ -2,6 +2,7 @@ package uz.kun.service;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 import uz.kun.dto.ProfileDTO;
 import uz.kun.entity.ProfileEntity;
@@ -148,6 +149,32 @@ public class ProfileService {
         else {
             profileRepository.save(moderator);
         }
+    }
+
+    public PageImpl get(int page, int size) {
+        Sort sort=Sort.by(Sort.Direction.DESC,"id");
+        Pageable pageable= PageRequest.of(page,size,sort);
+
+        Page<ProfileEntity> all = profileRepository.findAll(pageable);
+
+        List<ProfileDTO> profileDTOS=new LinkedList<>();
+
+        all.forEach(profileEntity ->
+                {
+
+                    ProfileDTO profile=new ProfileDTO();
+                    profile.setEmail(profileEntity.getEmail());
+                    profile.setName(profileEntity.getName());
+                    profile.setSurName(profileEntity.getSurname());
+                    profile.setRole(profileEntity.getRole());
+                    profile.setPassword(profileEntity.getPassword());
+                    profileDTOS.add(profile);
+
+                }
+                );
+        int totalPages = all.getTotalPages();
+        PageImpl page1=new PageImpl(profileDTOS,pageable,totalPages);
+        return page1;
     }
 }
 

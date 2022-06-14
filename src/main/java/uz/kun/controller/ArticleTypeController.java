@@ -1,5 +1,6 @@
 package uz.kun.controller;
 
+import org.springframework.data.domain.PageImpl;
 import uz.kun.dto.TypesDTO;
 import uz.kun.entity.TypesEntity;
 import uz.kun.enums.Lang;
@@ -44,10 +45,8 @@ public class ArticleTypeController {
     public ResponseEntity<?> create(@RequestBody TypesDTO typesDto, @RequestHeader("Authorization") String jwt) {
         JwtUtil.decode(jwt, ProfileRole.ADMIN);
         typesService.create(typesDto);
-        return ResponseEntity.ok().body("SuccsessFully created");
+        return ResponseEntity.ok().body("SuccessFully created");
     }
-
-
     @GetMapping("/getListForAdmin")
     public ResponseEntity<List<TypesDTO>> getlist(@RequestHeader("Authorization") String jwt) {
         JwtUtil.decode(jwt, ProfileRole.ADMIN);
@@ -55,7 +54,11 @@ public class ArticleTypeController {
         return ResponseEntity.ok().body(list);
     }
 
-
+    @GetMapping("/getListByLang")
+    public ResponseEntity<List<TypesDTO>> getByLang(@RequestParam(value = "lang",defaultValue = "uz")Lang lang) {
+        List<TypesDTO> list = typesService.getListByLang(lang);
+        return ResponseEntity.ok().body(list);
+    }
     @PutMapping("update/{id}")
     private ResponseEntity<?> update(@PathVariable("id") Integer id,
                                      @RequestBody TypesEntity dto,
@@ -74,8 +77,8 @@ public class ArticleTypeController {
     }
 
     @GetMapping("/getPagination")
-    public ResponseEntity<List<TypesDTO>> getPage(@RequestParam("page") int page, @RequestParam("size") int size) {
-        List<TypesDTO> list = typesService.getPage(page,size);
+    public ResponseEntity<PageImpl> getPage(@RequestParam("page") int page, @RequestParam("size") int size) {
+        PageImpl list = typesService.getPage(page,size);
         return ResponseEntity.ok().body(list);
     }
 }

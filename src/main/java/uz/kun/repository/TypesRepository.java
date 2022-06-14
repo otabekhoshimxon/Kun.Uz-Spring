@@ -15,8 +15,6 @@ public interface TypesRepository extends  PagingAndSortingRepository<TypesEntity
     List<TypesEntity> findAllByVisible(Boolean b);
 
 
-    @Query(value = "select * from types order by id limit :limit offset :offset ", nativeQuery = true)
-    List<TypesEntity> pagination(@Param("limit") int limit, @Param("offset") int offset );
 
     long countAllBy();
 /*    List<ArticleTypeDTO> getPagination(int page, int size);*/

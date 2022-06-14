@@ -1,6 +1,7 @@
 package uz.kun.controller;
 
 import uz.kun.dto.RegionDto;
+import uz.kun.enums.Lang;
 import uz.kun.enums.ProfileRole;
 import uz.kun.service.RegionService;
 import uz.kun.util.JwtUtil;
@@ -35,6 +36,12 @@ public class RegionController {
     public ResponseEntity<List<RegionDto>> getlist(@RequestHeader("Authorization") String jwt) {
         JwtUtil.decode(jwt, ProfileRole.ADMIN);
         List<RegionDto> list = regionService.getListOnlyForAdmin();
+        return ResponseEntity.ok().body(list);
+    }
+
+    @GetMapping("getListByLang")
+    public ResponseEntity<List<RegionDto>> getByLang(@RequestParam(value = "lang",defaultValue = "uz")Lang lang) {
+        List<RegionDto> list = regionService.getListByLang(lang);
         return ResponseEntity.ok().body(list);
     }
 

@@ -59,4 +59,20 @@ public class JwtUtil {
         return id;
     }
 
+    public static Integer decode(String jwt, ProfileRole admin, ProfileRole publisher) {
+
+        Claims claims = Jwts.parser()
+                .setSigningKey(secretKey)
+                .parseClaimsJws(jwt)
+                .getBody();
+        Integer id = (Integer) claims.get("id");
+        String role = (String) claims.get("role");
+
+        if (!admin.equals(ProfileRole.valueOf(role)) || !publisher.equals(ProfileRole.valueOf(role))) {
+            throw new BadRequestException("Not Access");
+        }
+        return id;
+
+
+    }
 }

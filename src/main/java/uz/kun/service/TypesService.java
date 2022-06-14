@@ -1,5 +1,6 @@
 package uz.kun.service;
 
+import org.springframework.data.domain.*;
 import uz.kun.dto.TypesDTO;
 import uz.kun.entity.TypesEntity;
 import uz.kun.enums.Lang;
@@ -8,7 +9,6 @@ import uz.kun.exps.BadRequestException;
 import uz.kun.exps.ItemNotFoundException;
 import uz.kun.repository.TypesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.Iterator;
@@ -23,22 +23,16 @@ public class TypesService {
     private TypesRepository typesRepository;
 
     public void create(TypesDTO typesDto) {
-
         Optional<TypesEntity> articleTypeEntity = typesRepository.findByKey(typesDto.getKey());
-
         if (articleTypeEntity.isPresent()) {
             throw new AlreadyExist("Already exist");
         }
-
         isValid(typesDto);
-
-
         TypesEntity entity = new TypesEntity();
         entity.setKey(typesDto.getKey());
         entity.setNameUz(typesDto.getNameUz());
         entity.setNameRu(typesDto.getNameRu());
         entity.setNameEn(typesDto.getNameEn());
-
         typesRepository.save(entity);
     }
 
@@ -46,25 +40,20 @@ public class TypesService {
         if (dto.getKey().length() < 5) {
             throw new BadRequestException("key to short");
         }
-
         if (dto.getNameUz() == null || dto.getNameUz().length() < 3) {
             throw new BadRequestException("wrong name uz");
         }
-
         if (dto.getNameRu() == null || dto.getNameRu().length() < 3) {
             throw new BadRequestException("wrong name ru");
         }
-
         if (dto.getNameEn() == null || dto.getNameEn().length() < 3) {
             throw new BadRequestException("wrong name en");
         }
     }
 
     public List<TypesDTO> getList() {
-
         Iterable<TypesEntity> all = typesRepository.findAllByVisible(true);
         List<TypesDTO> dtoList = new LinkedList<>();
-
         all.forEach(typesEntity -> {
             TypesDTO dto = new TypesDTO();
             dto.setKey(typesEntity.getKey());
@@ -132,11 +121,8 @@ public class TypesService {
     }
 
     public List<TypesDTO> getListByLang(Lang lang) {
-
         List<TypesEntity> all = typesRepository.findAllByVisible(true);
         List<TypesDTO> dtoList = new LinkedList<>();
-
-
         for (TypesEntity typesEntity : all) {
             TypesDTO dto = new TypesDTO();
             dto.setKey(typesEntity.getKey());
@@ -163,10 +149,14 @@ public class TypesService {
 
     }
 
-    public List<TypesDTO> getPage(int page, int size) {
+    public PageImpl getPage(int page, int size) {
+        Sort sort=Sort.by(Sort.Direction.DESC,"id");
+        Pageable pageable= PageRequest.of(page,size,sort);
 
-        List<TypesEntity> list=typesRepository.pagination(page,size);
-        long l = typesRepository.countAllBy();
+        Page<TypesEntity> list=typesRepository.findAll(pageable);
+
+        long totalElements = list.getTotalElements();
+
 
 
         List<TypesDTO> dtoList = new LinkedList<>();
@@ -180,7 +170,11 @@ public class TypesService {
             dtoList.add(dto);
 
         }
-        return dtoList;
+
+        PageImpl page1=new PageImpl(dtoList,pageable,totalElements);
+        return page1;
+
+
 
 
     }
