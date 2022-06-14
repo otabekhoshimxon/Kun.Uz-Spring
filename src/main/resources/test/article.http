@@ -1,0 +1,18 @@
+
+POST localhost:8080/article/create
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTQ5Njk2NzcsImV4cCI6MTY1NDk3MzI3NywiaXNzIjoiT2siLCJpZCI6MTAsInJvbGUiOiJBRE1JTiJ9.ZsCC6F1-tjYlmz79yqra0kBZQ_XoqM9Re99HY3tMhvg
+
+{
+  "title": "title_9gh27",
+  "content": "content_aezob",
+  "description": "description_gvdfm",
+  "regionId": 1,
+  "categoryId": 1,
+  "typesList": [
+    1
+  ],
+  "tagList": [
+    "tagList_1jb8i"
+  ]
+}

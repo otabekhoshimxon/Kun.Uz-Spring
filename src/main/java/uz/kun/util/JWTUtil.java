@@ -5,7 +5,8 @@ import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import uz.kun.enums.ProfileRole;
-import uz.kun.exception.BadRequestException;
+import uz.kun.exps.NotAccessException;
+
 
 import java.time.Instant;
 import java.util.Date;
@@ -29,7 +30,7 @@ public class JWTUtil {
 
     }
 
-    public static String encode(Long id, ProfileRole role)
+    public static String encode(Integer id, ProfileRole role)
     {
 
         //optional - ixtiyoriy
@@ -45,29 +46,33 @@ public class JWTUtil {
 
     }
 
-    public static Long decode(String token)
+    public static Integer decode(String token)
     {
         Claims claims=Jwts.parser()
                 .setSigningKey(KEY_SECURITY)
                 .parseClaimsJws(token)
                 .getBody();
-        return (Long) claims.get("id");
+        return (Integer) claims.get("id");
 
-    } public static Long decode(String token,ProfileRole role)
+    } public static Integer decode(String token,ProfileRole role)
     {
         Claims claims=Jwts.parser()
                 .setSigningKey(KEY_SECURITY)
                 .parseClaimsJws(token)
                 .getBody();
-        Long id = (Long) claims.get("id");
-        ProfileRole role1 = (ProfileRole) claims.get("role");
+        Integer id = (Integer) claims.get("id");
+
+        ProfileRole role1 = ProfileRole.valueOf((String) claims.get("role"));
+
+
 
         if (!role.equals(role1))
         {
-            throw new BadRequestException("Not Access");
+            throw new NotAccessException("Not Access");
         }
 
 
+        return id;
     }
 
 }

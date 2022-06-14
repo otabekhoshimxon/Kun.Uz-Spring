@@ -1,17 +1,13 @@
 package uz.kun.repository;
-//User :Lenovo
-//Date :09.06.2022
-//Time :5:06
-//Project Name :Kun.uzWithThymleaf
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.CrudRepository;
-import uz.kun.entity.RegionEntity;
 import uz.kun.entity.TagEntity;
+import org.springframework.data.repository.CrudRepository;
 
+import java.util.Optional;
 
-public interface TagRepository extends JpaRepository<TagEntity,Long> , CrudRepository<TagEntity,Long> {
+public interface TagRepository extends CrudRepository<TagEntity, Integer> {
 
+    Optional<TagEntity> findByName(String name);
 
-
+    boolean existsByName(String name);
 }

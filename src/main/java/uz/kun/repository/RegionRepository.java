@@ -1,17 +1,16 @@
 package uz.kun.repository;
-//User :Lenovo
-//Date :09.06.2022
-//Time :5:06
-//Project Name :Kun.uzWithThymleaf
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.CrudRepository;
-import uz.kun.entity.CategoryEntity;
 import uz.kun.entity.RegionEntity;
+import org.springframework.data.repository.CrudRepository;
 
+import java.util.List;
+import java.util.Optional;
 
-public interface RegionRepository extends JpaRepository<RegionEntity,Long> , CrudRepository<RegionEntity,Long> {
+public interface RegionRepository extends CrudRepository<RegionEntity, Integer> {
 
+    Optional<RegionEntity> findByKey(String key);
+
+    List<RegionEntity> findAllByVisible(Boolean b);
 
 
 }

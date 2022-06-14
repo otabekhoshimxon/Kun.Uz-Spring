@@ -1,18 +1,13 @@
 package uz.kun.dto;
-//User :Lenovo
-//Date :09.06.2022
-//Time :19:53
-//Project Name :Kun.uzWithThymleaf
 
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Getter;
+import lombok.Setter;
 
-import javax.persistence.*;
-
-@Data
+@Setter
+@Getter
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class AuthDTO {
-
-    private String login;
+    private String email;
     private String password;
-
-
 }

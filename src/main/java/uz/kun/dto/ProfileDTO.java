@@ -1,29 +1,19 @@
 package uz.kun.dto;
-//User :Lenovo
-//Date :09.06.2022
-//Time :4:54
-//Project Name :Kun.uzWithThymleaf
 
-
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 import uz.kun.enums.ProfileRole;
-import uz.kun.enums.ProfileStatus;
-
-import java.time.LocalDateTime;
 
 @Data
-
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ProfileDTO {
-    private Long id;
+    private Integer id;
     private String name;
-    private String surname;
-    private String eMail;
+    private String surName;
+    private String email;
+    private ProfileRole role;
+    private String password;
+
     private String jwt;
-    private ProfileStatus status=ProfileStatus.ACTIVE;
-    private ProfileRole role=ProfileRole.USER;
-    private boolean visible=Boolean.TRUE;
-    private LocalDateTime created_date=LocalDateTime.now();
-
-
 
 }

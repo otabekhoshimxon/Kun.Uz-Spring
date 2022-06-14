@@ -1,8 +1,7 @@
-package uz.kun.enums;//User :Lenovo
-//Date :09.06.2022
-//Time :4:57
-//Project Name :Kun.uzWithThymleaf
+package uz.kun.enums;
 
 public enum ProfileStatus {
-    ACTIVE,BLOCK
+
+    ACTIVE, BLOCK
+
 }

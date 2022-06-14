@@ -1,43 +1,51 @@
 package uz.kun.entity;
-//User :Lenovo
-//Date :09.06.2022
-//Time :4:54
-//Project Name :Kun.uzWithThymleaf
-
-
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Getter;
+import lombok.Setter;
 import uz.kun.enums.ProfileRole;
 import uz.kun.enums.ProfileStatus;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
-@Data
+@Setter
+@Getter
 @Entity
 @Table(name = "profile")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ProfileEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Column
+    private Integer id;
+
+    @Column(nullable = false)
     private String name;
-    @Column
+
+    @Column(nullable = false)
     private String surname;
-    @Column
-    private String eMail;
-    @Column
+
+    @Column(nullable = false)
+    private String email;
+
+    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    private ProfileStatus status=ProfileStatus.ACTIVE;
-    @Column
+    private ProfileStatus status;
+
+    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    private ProfileRole role=ProfileRole.USER;
+    private ProfileRole role;
 
-    @Column
-    private boolean visible=Boolean.TRUE;
-    @Column
-    private LocalDateTime created_date;
+    @Column(nullable = false)
+    private Boolean visible = Boolean.TRUE;
 
+    @Column(nullable = false)
+    private String password;
 
+    @Column(nullable = false, name = "created_date")
+    private LocalDateTime createdDate = LocalDateTime.now();
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "moderator")
+    private List<ArticleEntity> articleList;
 
 }

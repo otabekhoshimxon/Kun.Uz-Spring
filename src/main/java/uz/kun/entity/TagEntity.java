@@ -1,30 +1,25 @@
 package uz.kun.entity;
-//User :Lenovo
-//Date :09.06.2022
-//Time :5:09
-//Project Name :Kun.uzWithThymleaf
 
-import lombok.Data;
-import uz.kun.enums.Status;
+import lombok.Getter;
+import lombok.Setter;
+import uz.kun.enums.TagStatus;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "tag")
 public class TagEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Column
-    private LocalDateTime created_date;
-    @Column
+    private Integer id;
+    @Column(nullable = false)
     private String name;
-    @Column
+    @Column(name = "status", nullable = false)
     @Enumerated(EnumType.STRING)
-    private Status status;
-
-
+    private TagStatus status;
+    @Column(name = "created_date", nullable = false)
+    private LocalDateTime createdDate = LocalDateTime.now();
 }
