@@ -63,9 +63,6 @@ public class JWTUtil {
         Integer id = (Integer) claims.get("id");
 
         ProfileRole role1 = ProfileRole.valueOf((String) claims.get("role"));
-
-
-
         if (!role.equals(role1))
         {
             throw new NotAccessException("Not Access");
