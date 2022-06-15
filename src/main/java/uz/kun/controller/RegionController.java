@@ -40,7 +40,7 @@ public class RegionController {
     }
 
     @GetMapping("getListByLang")
-    public ResponseEntity<List<RegionDto>> getByLang(@RequestParam(value = "lang",defaultValue = "uz")Lang lang) {
+    public ResponseEntity<List<RegionDto>> getByLang(@RequestHeader(value = "Accept-Language", defaultValue = "uz")Lang lang) {
         List<RegionDto> list = regionService.getListByLang(lang);
         return ResponseEntity.ok().body(list);
     }

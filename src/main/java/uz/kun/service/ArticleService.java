@@ -8,7 +8,9 @@ import uz.kun.exps.ItemNotFoundException;
 import uz.kun.repository.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import uz.kun.repository.ProfileRepository;
 
+import java.time.LocalDateTime;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -25,6 +27,8 @@ public class ArticleService {
     private ArticleTypeService articleTypeService;
     @Autowired
     private ArticleTagService articleTagService;
+@Autowired
+    private ProfileRepository profileRepository;
 
     public ArticleDTO create(ArticleCreateDTO dto, Integer profileId) {
         ArticleEntity entity = new ArticleEntity();
@@ -142,6 +146,30 @@ public class ArticleService {
             articleDTOS.add(articleDTO);
         }
             return articleDTOS;
+
+
+    }
+
+    public void publish(String id, Integer profileId) {
+
+        Optional<ArticleEntity> byId = articleRepository.findById(id);
+        if (byId.isEmpty())
+        {
+            throw new ItemNotFoundException("Article not found");
+
+        }
+        ArticleEntity entity = byId.get();
+        if (entity.getPublishDate()==null)
+        {
+            throw new ItemNotFoundException("Article already published");
+        }
+        Optional<ProfileEntity> byId1 = profileRepository.findById(profileId);
+        if (byId1.isPresent())
+        {
+            entity.setPublisher(byId1.get());
+            entity.setPublishDate(LocalDateTime.now());
+            articleRepository.save(entity);
+        }
 
 
     }

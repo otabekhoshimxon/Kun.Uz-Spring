@@ -1,7 +1,12 @@
 package uz.kun.service;
 
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 import uz.kun.dto.CategoryDTO;
+import uz.kun.dto.TypesDTO;
 import uz.kun.entity.CategoryEntity;
+import uz.kun.entity.TypesEntity;
+import uz.kun.enums.Lang;
 import uz.kun.exps.AlreadyExist;
 import uz.kun.exps.BadRequestException;
 import uz.kun.exps.ItemNotFoundException;
@@ -49,7 +54,6 @@ public class CategoryService {
     }
 
     public List<CategoryDTO> getListOnlyForAdmin() {
-
         Iterable<CategoryEntity> all = categoryRepository.findAll();
         List<CategoryDTO> dtoList = new LinkedList<>();
 
@@ -57,6 +61,7 @@ public class CategoryService {
             dtoList.add(toDTO(categoryEntity));
         });
         return dtoList;
+
     }
 
     public void update(Integer id, CategoryDTO dto) {
@@ -125,4 +130,25 @@ public class CategoryService {
         }
     }
 
+    public List<CategoryDTO> getListByLang(Lang lang) {
+
+
+
+        Iterable<CategoryEntity> all = categoryRepository.findAll();
+        List<CategoryDTO> dtoList = new LinkedList<>();
+
+        all.forEach(categoryEntity -> {
+            CategoryDTO dto = new CategoryDTO();
+            dto.setId(categoryEntity.getId());
+            dto.setKey(categoryEntity.getKey());
+            dto.setNameUz(categoryEntity.getNameUz());
+            dto.setNameRu(categoryEntity.getNameRu());
+            dto.setNameEn(categoryEntity.getNameEn());
+            dtoList.add(dto);
+
+        });
+
+        return dtoList;
+
+    }
 }

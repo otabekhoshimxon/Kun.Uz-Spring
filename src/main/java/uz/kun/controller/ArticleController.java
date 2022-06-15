@@ -39,6 +39,12 @@ public class ArticleController {
        articleService.update(id,dto, profileId);
         return ResponseEntity.ok().body("Successfully updated");
     }
+    @PutMapping("/publish/{id}")
+    public ResponseEntity<?> update(@PathVariable("id") String id,@RequestHeader("Authorization") String jwt) {
+        Integer profileId = JwtUtil.decode(jwt, ProfileRole.MODERATOR);
+       articleService.publish(id, profileId);
+        return ResponseEntity.ok().body("Successfully updated");
+    }
       @DeleteMapping("/delete/{id}")
     public ResponseEntity<ArticleDTO> delete(@PathVariable("id") String id,
                                              @RequestHeader("Authorization") String jwt) {

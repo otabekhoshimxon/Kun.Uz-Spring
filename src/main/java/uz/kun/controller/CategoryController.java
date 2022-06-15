@@ -1,6 +1,7 @@
 package uz.kun.controller;
 
 import uz.kun.dto.CategoryDTO;
+import uz.kun.enums.Lang;
 import uz.kun.enums.ProfileRole;
 import uz.kun.service.CategoryService;
 import uz.kun.util.JwtUtil;
@@ -38,6 +39,12 @@ public class CategoryController {
     public ResponseEntity<List<CategoryDTO>> getList(@RequestHeader("Authorization") String jwt) {
         JwtUtil.decode(jwt, ProfileRole.ADMIN);
         List<CategoryDTO> list = categoryService.getListOnlyForAdmin();
+        return ResponseEntity.ok().body(list);
+    }
+
+    @GetMapping("/getListByLang")
+    public ResponseEntity<List<CategoryDTO>> getByLang(@RequestHeader(value = "Accept-Language", defaultValue = "uz")Lang lang) {
+        List<CategoryDTO> list = categoryService.getListByLang(lang);
         return ResponseEntity.ok().body(list);
     }
 

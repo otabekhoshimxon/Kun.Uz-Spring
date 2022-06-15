@@ -55,7 +55,7 @@ public class ArticleTypeController {
     }
 
     @GetMapping("/getListByLang")
-    public ResponseEntity<List<TypesDTO>> getByLang(@RequestParam(value = "lang",defaultValue = "uz")Lang lang) {
+    public ResponseEntity<List<TypesDTO>> getByLang(@RequestHeader(value = "Accept-Language", defaultValue = "uz")Lang lang) {
         List<TypesDTO> list = typesService.getListByLang(lang);
         return ResponseEntity.ok().body(list);
     }
