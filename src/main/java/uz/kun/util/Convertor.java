@@ -115,4 +115,23 @@ public  class Convertor{
     }
 
 
+    public ArticleDTO entityToDTO(ArticleEntity article) {
+
+        ArticleDTO dto=new ArticleDTO();
+        dto.setPublishDate(article.getPublishDate());
+        dto.setId(article.getId());
+        dto.setCreatedDate(article.getCreatedDate());
+        dto.setPublisher(entityToDTO(article.getPublisher()));
+        dto.setModerator(entityToDTO(article.getModerator()));
+        dto.setCategory(entityToDTO(article.getCategory()));
+        dto.setContent(article.getContent());
+        dto.setRegion(entityToDTO(article.getRegion()));
+        dto.setVisible(article.getVisible());
+        dto.setStatus(article.getStatus());
+        dto.setSharedCount(article.getSharedCount());
+        dto.setTitle(article.getTitle());
+        dto.setViewCount(article.getViewCount());
+        dto.setDescription(article.getDescription());
+        return dto;
+    }
 }

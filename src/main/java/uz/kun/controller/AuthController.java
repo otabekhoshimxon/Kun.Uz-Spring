@@ -1,5 +1,6 @@
 package uz.kun.controller;
 
+import org.springframework.ui.Model;
 import uz.kun.dto.AuthDTO;
 import uz.kun.dto.ProfileDTO;
 import uz.kun.dto.RegistrationDTO;
@@ -28,6 +29,14 @@ public class AuthController {
     @PostMapping("/login")
     public ResponseEntity<ProfileDTO> login(@RequestBody AuthDTO dto) {
         ProfileDTO profileDto = authService.login(dto);
+        return ResponseEntity.ok(profileDto);
+    }
+
+    @PostMapping("/log")
+    public ResponseEntity<ProfileDTO> log(Model model) {
+        AuthDTO authDTO=new AuthDTO();
+        model.addAttribute("auth",authDTO);
+        ProfileDTO profileDto = authService.login(authDTO);
         return ResponseEntity.ok(profileDto);
     }
 
