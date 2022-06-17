@@ -64,5 +64,9 @@ public class ArticleEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     private CategoryEntity category;
 
+    public ArticleEntity() {
+    }
 
+    public ArticleEntity(String articleId) {
+    }
 }

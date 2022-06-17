@@ -8,9 +8,9 @@ import uz.kun.enums.ProfileRole;
 import uz.kun.enums.ProfileStatus;
 import uz.kun.exps.BadRequestException;
 import uz.kun.repository.ProfileRepository;
-import uz.kun.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import uz.kun.util.JWTUtil;
 
 import java.util.Optional;
 
@@ -34,8 +34,8 @@ public class AuthService {
 
         ProfileDTO dto = new ProfileDTO();
         dto.setName(profile.getName());
-        dto.setSurName(profile.getSurname());
-        dto.setJwt(JwtUtil.encode(profile.getId(), profile.getRole()));
+        dto.setSurname(profile.getSurname());
+        dto.setJwt(JWTUtil.encode(profile.getId(), profile.getRole()));
 
         return dto;
     }
@@ -56,9 +56,9 @@ public class AuthService {
 
         ProfileDTO responseDTO = new ProfileDTO();
         responseDTO.setName(dto.getName());
-        responseDTO.setSurName(dto.getSurname());
+        responseDTO.setSurname(dto.getSurname());
         responseDTO.setEmail(dto.getEmail());
-        responseDTO.setJwt(JwtUtil.encode(entity.getId(), entity.getRole()));
+        responseDTO.setJwt(JWTUtil.encode(entity.getId(), entity.getRole()));
         return responseDTO;
     }
 }

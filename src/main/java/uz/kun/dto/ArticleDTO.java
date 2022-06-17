@@ -22,10 +22,10 @@ public class ArticleDTO {
     private Boolean visible = Boolean.TRUE;
     private LocalDateTime createdDate = LocalDateTime.now();
     private LocalDateTime publishDate=null;
-    private ProfileEntity moderator;
-    private ProfileEntity publisher;
-    private RegionEntity region;
-    private CategoryEntity category;
+    private ProfileDTO moderator;
+    private ProfileDTO publisher;
+    private RegionDto region;
+    private CategoryDTO category;
 
 
 }

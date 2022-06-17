@@ -36,6 +36,10 @@ public class CommentEntity {
     @JoinColumn(name = "profile_id")
     private ProfileEntity profile;
 
+    public CommentEntity(Integer id) {
+        this.id = id;
+    }
 
-
+    public CommentEntity() {
+    }
 }

@@ -22,7 +22,7 @@ public class ArticleLikeEntity {
     private LocalDateTime createdDate;
     @Column
     @Enumerated(EnumType.STRING)
-    private LikeStatus likeStatus=LikeStatus.ACTIVE;
+    private LikeStatus likeStatus;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "profile_id")
     private ProfileEntity profile;

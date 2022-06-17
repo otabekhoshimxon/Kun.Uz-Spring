@@ -5,6 +5,7 @@ package uz.kun.entity;
 //Project Name :lesson_14_kun_uz
 
 import lombok.Data;
+import uz.kun.enums.LikeStatus;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -26,4 +27,8 @@ public class CommentLikeEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "comment_id")
     private CommentEntity comment;
+
+    @Column
+    @Enumerated(EnumType.STRING)
+    private LikeStatus likeStatus;
 }

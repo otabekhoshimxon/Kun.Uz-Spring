@@ -1,5 +1,6 @@
 package uz.kun.service;
 
+import uz.kun.dto.RegionCreateDto;
 import uz.kun.dto.RegionDto;
 import uz.kun.entity.RegionEntity;
 import uz.kun.enums.Lang;
@@ -19,7 +20,7 @@ public class RegionService {
     @Autowired
     private RegionRepository regionRepository;
 
-    public void create(RegionDto regionDto) {
+    public void create(RegionCreateDto regionDto) {
 
         Optional<RegionEntity> region = regionRepository.findByKey(regionDto.getKey());
 
@@ -38,7 +39,7 @@ public class RegionService {
         regionRepository.save(regionEntity);
     }
 
-    private void isValid(RegionDto dto) {
+    private void isValid(RegionCreateDto dto) {
         if (dto.getKey().length() < 5) {
             throw new BadRequestException("key to short");
         }

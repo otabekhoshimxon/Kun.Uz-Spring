@@ -9,11 +9,10 @@ import uz.kun.enums.ProfileRole;
 public class ProfileDTO {
     private Integer id;
     private String name;
-    private String surName;
+    private String surname;
     private String email;
     private ProfileRole role;
     private String password;
-
     private String jwt;
 
 }

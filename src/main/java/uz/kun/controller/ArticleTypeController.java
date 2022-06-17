@@ -6,11 +6,13 @@ import uz.kun.entity.TypesEntity;
 import uz.kun.enums.Lang;
 import uz.kun.enums.ProfileRole;
 import uz.kun.service.TypesService;
-import uz.kun.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import uz.kun.util.HttpHeaderUtil;
+import uz.kun.util.JWTUtil;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @RequestMapping("/article_type")
@@ -41,15 +43,15 @@ public class ArticleTypeController {
 
     // SECURED
 
-    @PostMapping("/create")
-    public ResponseEntity<?> create(@RequestBody TypesDTO typesDto, @RequestHeader("Authorization") String jwt) {
-        JwtUtil.decode(jwt, ProfileRole.ADMIN);
+    @PostMapping("/adm/create")
+    public ResponseEntity<?> create(@RequestBody TypesDTO typesDto,  HttpServletRequest request) {
+      HttpHeaderUtil.getId(request, ProfileRole.MODERATOR);
         typesService.create(typesDto);
         return ResponseEntity.ok().body("SuccessFully created");
     }
-    @GetMapping("/getListForAdmin")
-    public ResponseEntity<List<TypesDTO>> getlist(@RequestHeader("Authorization") String jwt) {
-        JwtUtil.decode(jwt, ProfileRole.ADMIN);
+    @GetMapping("/adm/getListForAdmin")
+    public ResponseEntity<List<TypesDTO>> getlist( HttpServletRequest request) {
+         HttpHeaderUtil.getId(request, ProfileRole.MODERATOR);
         List<TypesDTO> list = typesService.getListOnlyForAdmin();
         return ResponseEntity.ok().body(list);
     }
@@ -59,19 +61,19 @@ public class ArticleTypeController {
         List<TypesDTO> list = typesService.getListByLang(lang);
         return ResponseEntity.ok().body(list);
     }
-    @PutMapping("update/{id}")
+    @PutMapping("/adm/update/{id}")
     private ResponseEntity<?> update(@PathVariable("id") Integer id,
                                      @RequestBody TypesEntity dto,
-                                     @RequestHeader("Authorization") String jwt) {
-        JwtUtil.decode(jwt, ProfileRole.ADMIN);
+                                     HttpServletRequest request) {
+        HttpHeaderUtil.getId(request, ProfileRole.MODERATOR);
         typesService.update(id, dto);
         return ResponseEntity.ok().body("Succsessfully updated");
     }
 
-    @DeleteMapping("delete/{id}")
+    @DeleteMapping("/adm/delete/{id}")
     private ResponseEntity<?> delete(@PathVariable("id") Integer id,
-                                     @RequestHeader("Authorization") String jwt) {
-        JwtUtil.decode(jwt, ProfileRole.ADMIN);
+                                     HttpServletRequest request) {
+        HttpHeaderUtil.getId(request, ProfileRole.MODERATOR);
         typesService.delete(id);
         return ResponseEntity.ok().body("Sucsessfully deleted");
     }

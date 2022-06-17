@@ -4,5 +4,5 @@ package uz.kun.enums;//User :Lenovo
 //Project Name :lesson_14_kun_uz
 
 public enum LikeStatus {
-    ACTIVE,BLOCK
+    LIKE,DISLIKE
 }

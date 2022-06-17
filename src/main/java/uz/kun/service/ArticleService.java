@@ -9,14 +9,20 @@ import uz.kun.repository.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import uz.kun.repository.ProfileRepository;
+import uz.kun.util.Convertor;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 
 @Service
 public class ArticleService {
+    @Autowired
+    private Convertor convertor;
+
+
     @Autowired
     private ArticleRepository articleRepository;
     @Autowired
@@ -59,11 +65,11 @@ public class ArticleService {
 
 
         ArticleDTO articleDTO = new ArticleDTO();
-        articleDTO.setCategory(entity.getCategory());
+        articleDTO.setCategory(convertor.entityToDTO(entity.getCategory()));
         articleDTO.setContent(entity.getContent());
         articleDTO.setDescription(entity.getDescription());
-        articleDTO.setModerator(entity.getModerator());
-        articleDTO.setRegion(entity.getRegion());
+        articleDTO.setModerator(convertor.entityToDTO(entity.getModerator()));
+        articleDTO.setRegion(convertor.entityToDTO(entity.getRegion()));
         articleDTO.setStatus(entity.getStatus());
         articleDTO.setTitle(entity.getTitle());
 
@@ -127,25 +133,8 @@ public class ArticleService {
 
     public List<ArticleDTO> getAll() {
         List<ArticleDTO> articleDTOS = new LinkedList<>();
-        Iterable<ArticleEntity> all = articleRepository.findAll();
-        while (all.iterator().hasNext()) {
-            ArticleEntity next = all.iterator().next();
-            ArticleDTO articleDTO = new ArticleDTO();
-            articleDTO.setId(next.getId());
-            articleDTO.setCategory(next.getCategory());
-            articleDTO.setContent(next.getContent());
-            articleDTO.setDescription(next.getDescription());
-            articleDTO.setModerator(next.getModerator());
-            articleDTO.setRegion(next.getRegion());
-            articleDTO.setStatus(next.getStatus());
-            articleDTO.setTitle(next.getTitle());
-            articleDTO.setPublisher(next.getPublisher());
-            articleDTO.setPublishDate(next.getPublishDate());
-            articleDTO.setViewCount(next.getViewCount());
-            articleDTO.setSharedCount(next.getSharedCount());
-            articleDTOS.add(articleDTO);
-        }
-            return articleDTOS;
+        List<ArticleEntity> all = articleRepository.findAllForAdmin();
+        return getWrapArticleDTOS(all);
 
 
     }
@@ -159,7 +148,7 @@ public class ArticleService {
 
         }
         ArticleEntity entity = byId.get();
-        if (entity.getPublishDate()==null)
+        if (entity.getPublishDate()!=null)
         {
             throw new ItemNotFoundException("Article already published");
         }
@@ -168,9 +157,49 @@ public class ArticleService {
         {
             entity.setPublisher(byId1.get());
             entity.setPublishDate(LocalDateTime.now());
+            entity.setStatus(ArticleStatus.PUBLISHED);
             articleRepository.save(entity);
         }
 
+
+    }
+
+
+    public List<ArticleDTO> getPublishedArticleList() {
+
+
+
+        List<ArticleEntity> all = articleRepository.getPublished(ArticleStatus.PUBLISHED);
+        return getWrapArticleDTOS(all);
+    }
+
+    private List<ArticleDTO> getWrapArticleDTOS( List<ArticleEntity> all) {
+
+        List<ArticleDTO> articleDTOS=new ArrayList<>();
+        for (ArticleEntity next : all) {
+            ArticleDTO articleDTO = new ArticleDTO();
+            articleDTO.setId(next.getId());
+            articleDTO.setCategory(convertor.entityToDTO(next.getCategory()));
+            articleDTO.setContent(next.getContent());
+            articleDTO.setDescription(next.getDescription());
+            articleDTO.setModerator(convertor.entityToDTO(next.getModerator()));
+            articleDTO.setRegion(convertor.entityToDTO(next.getRegion()));
+            articleDTO.setStatus(next.getStatus());
+            articleDTO.setTitle(next.getTitle());
+            articleDTO.setPublisher(convertor.entityToDTO(next.getPublisher()));
+            articleDTO.setPublishDate(next.getPublishDate());
+            articleDTO.setViewCount(next.getViewCount());
+            articleDTO.setSharedCount(next.getSharedCount());
+            articleDTOS.add(articleDTO);
+        }
+        return articleDTOS;
+    }
+
+    public List<ArticleDTO> getLast(String key) {
+
+
+        List<ArticleEntity> last = articleRepository.getLast( key);
+        return getWrapArticleDTOS(last);
 
     }
 }

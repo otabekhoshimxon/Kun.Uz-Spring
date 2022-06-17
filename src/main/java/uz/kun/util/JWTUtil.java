@@ -4,6 +4,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import uz.kun.dto.JwtDTO;
 import uz.kun.enums.ProfileRole;
 import uz.kun.exps.NotAccessException;
 
@@ -70,6 +71,18 @@ public class JWTUtil {
 
 
         return id;
+    }
+
+    public  static JwtDTO decodeJwtDTO(String token)
+    {
+        Claims claims=Jwts.parser()
+                .setSigningKey(KEY_SECURITY)
+                .parseClaimsJws(token)
+                .getBody();
+        Integer id = (Integer) claims.get("id");
+
+        ProfileRole role1 = ProfileRole.valueOf((String) claims.get("role"));
+        return new JwtDTO(id,role1);
     }
 
 }
