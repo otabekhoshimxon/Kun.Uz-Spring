@@ -19,7 +19,7 @@ public class ArticleLikeEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column
-    private LocalDateTime createdDate;
+    private LocalDateTime createdDate=LocalDateTime.now();
     @Column
     @Enumerated(EnumType.STRING)
     private LikeStatus likeStatus;

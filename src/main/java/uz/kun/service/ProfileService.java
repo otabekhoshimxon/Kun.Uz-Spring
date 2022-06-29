@@ -4,15 +4,21 @@ package uz.kun.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 import uz.kun.dto.ProfileDTO;
+import uz.kun.dto.ProfileFilterDTO;
+import uz.kun.entity.AttachEntity;
 import uz.kun.entity.ProfileEntity;
 import uz.kun.enums.ProfileStatus;
 import uz.kun.exps.AlreadyExist;
 import uz.kun.exps.AlreadyExistPhone;
 import uz.kun.exps.BadRequestException;
 import uz.kun.exps.ItemNotFoundException;
+import uz.kun.repository.CustomProfileRepository;
 import uz.kun.repository.ProfileRepository;
+import uz.kun.util.Convertor;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -22,6 +28,15 @@ public class ProfileService {
     @Autowired
     private ProfileRepository profileRepository;
 
+  @Autowired
+    private CustomProfileRepository customProfileRepository;
+
+  @Autowired
+    private Convertor convertor;
+
+
+    @Autowired
+    private AttachService attachService;
     public ProfileDTO create(ProfileDTO profileDto) {
 
         Optional<ProfileEntity> entity = profileRepository.findByEmail(profileDto.getEmail());
@@ -178,5 +193,74 @@ public class ProfileService {
     }
 
 
+    public void updateImage(Integer id, String imageId) {
+
+
+        Optional<ProfileEntity> byId = profileRepository.findById(id);
+        if (byId.isEmpty())
+        {
+         throw new BadRequestException("User not found");
+
+        }
+
+        ProfileEntity entity = byId.get();
+        System.err.println(entity);
+
+        AttachEntity image = attachService.getById(imageId);
+        if (image==null){
+            throw new ItemNotFoundException("Image not found");
+        }
+        String old = image.getId();
+
+        if (entity.getImage()==null && imageId!=null){
+
+            entity.setImage(new AttachEntity(imageId));
+
+        } else if (entity.getImage()!=null && imageId==null) {
+
+            entity.setImage(null);
+            profileRepository.save(entity);
+            attachService.delete1(old);
+
+        } else if (entity.getImage()!=null && imageId!=null && !entity.getImage().getId().equals(imageId)) {
+
+            entity.setImage(new AttachEntity(imageId));
+            attachService.delete1(entity.getImage().getId());
+        }
+
+        entity.setImage(new AttachEntity(imageId));
+        profileRepository.save(entity);
+        System.err.println(entity);
+
+
+
+
+
+
+
+
+
+    }
+
+    public ProfileEntity findByEmail(String email) {
+        Optional<ProfileEntity> byEmail = profileRepository.findByEmail(email);
+        if (byEmail.isEmpty())
+        {
+            throw new ItemNotFoundException("Email not found");
+        }
+        return byEmail.get();
+    }
+
+
+    public List<ProfileDTO> filter(ProfileFilterDTO filterDTO){
+        List<ProfileEntity> filter = customProfileRepository.filter(filterDTO);
+        List<ProfileDTO> profileDTOS=new ArrayList<>();
+
+        for (ProfileEntity profileEntity : filter) {
+            ProfileDTO dto = convertor.entityToDTO(profileEntity);
+            profileDTOS.add(dto);
+        }
+        return profileDTOS;
+    }
 }
 

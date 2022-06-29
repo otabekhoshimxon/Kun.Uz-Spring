@@ -17,7 +17,7 @@ public class Application {
 		SpringApplication.run(Application.class, args);
 	}
 
-
+/*
 	@Autowired
 	private ProfileService service;
 
@@ -61,5 +61,5 @@ public class Application {
 			service.save(user);
 
 		};
-	}
+	}*/
 }

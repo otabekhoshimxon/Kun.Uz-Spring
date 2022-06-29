@@ -1,5 +1,6 @@
 package uz.kun.controller;
 
+import io.swagger.annotations.Api;
 import org.springframework.data.domain.PageImpl;
 import uz.kun.dto.TypesDTO;
 import uz.kun.entity.TypesEntity;
@@ -17,6 +18,7 @@ import java.util.List;
 
 @RequestMapping("/article_type")
 @RestController
+@Api(tags = "Article Type Controller ")
 public class ArticleTypeController {
     @Autowired
     private TypesService typesService;

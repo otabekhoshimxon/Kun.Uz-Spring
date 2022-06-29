@@ -4,20 +4,18 @@ package uz.kun.service;
 //Time :14:09
 //Project Name :Kun.uz
 
-import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import uz.kun.dto.SavedArticleDTO;
 import uz.kun.entity.ArticleEntity;
 import uz.kun.entity.ProfileEntity;
-import uz.kun.entity.SavedArticle;
+import uz.kun.entity.SavedArticleEntity;
 import uz.kun.exps.BadRequestException;
 import uz.kun.repository.ArticleRepository;
 import uz.kun.repository.ProfileRepository;
 import uz.kun.repository.SavedArticleRepository;
 import uz.kun.util.Convertor;
 
-import javax.persistence.*;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -50,7 +48,7 @@ public class SavedArticleService {
         }
         ProfileEntity profileEntity = profile.get();
         ArticleEntity articleEntity = article.get();
-        savedArticleRepository.save(new SavedArticle(profileEntity,articleEntity));
+        savedArticleRepository.save(new SavedArticleEntity(profileEntity,articleEntity));
 
     }
 
@@ -71,14 +69,14 @@ public class SavedArticleService {
 
         ProfileEntity profileEntity = profile.get();
         ArticleEntity articleEntity = article.get();
-        savedArticleRepository.delete(new SavedArticle(profileEntity,articleEntity));
+        savedArticleRepository.delete(new SavedArticleEntity(profileEntity,articleEntity));
 
     }
 
     public List<SavedArticleDTO> getAll(Integer profileId) {
 
 
-        List<SavedArticle> byProfileId = savedArticleRepository.findByProfileId(profileId);
+        List<SavedArticleEntity> byProfileId = savedArticleRepository.findByProfileId(profileId);
 
         if (byProfileId.isEmpty())
         {
@@ -87,10 +85,10 @@ public class SavedArticleService {
 
         List<SavedArticleDTO> saved=new LinkedList<>();
 
-        for (SavedArticle savedArticle : byProfileId) {
+        for (SavedArticleEntity savedArticleEntity : byProfileId) {
 
             SavedArticleDTO savedArticleDTO=new SavedArticleDTO();
-            savedArticleDTO.setArticleDTO(convertor.entityToDTO(savedArticle.getArticle()));
+            savedArticleDTO.setArticleDTO(convertor.entityToDTO(savedArticleEntity.getArticle()));
             saved.add(savedArticleDTO);
         }
         return saved;

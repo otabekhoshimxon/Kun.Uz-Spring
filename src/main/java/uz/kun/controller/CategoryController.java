@@ -1,5 +1,6 @@
 package uz.kun.controller;
 
+import io.swagger.annotations.Api;
 import uz.kun.dto.CategoryDTO;
 import uz.kun.enums.Lang;
 import uz.kun.enums.ProfileRole;
@@ -14,6 +15,7 @@ import java.util.List;
 
 @RequestMapping("/category")
 @RestController
+@Api(tags = "Category controller ")
 public class CategoryController {
 
     @Autowired

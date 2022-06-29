@@ -3,6 +3,7 @@ package uz.kun.controller;
 //Date :12.06.2022
 //Time :23:20
 //Project Name :lesson_14_kun_uz
+import io.swagger.annotations.Api;
 import uz.kun.dto.CommentCreateDTO;
 import uz.kun.dto.CommentDTO;
 import uz.kun.enums.ProfileRole;
@@ -18,6 +19,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/comment")
+@Api(tags = "Comment controller ")
 public class CommentController {
 
 
@@ -33,10 +35,9 @@ public class CommentController {
         return ResponseEntity.ok("ok");
     }
 @GetMapping("/getAllComment")
-    public ResponseEntity<?> getAll(@RequestHeader("Token") String jwt)
-    {
-        Integer pID = JWTUtil.decode(jwt, ProfileRole.USER);
-        List<CommentDTO> ownComment = commentService.getOwnComment(pID);
+    public ResponseEntity<?> getAll(HttpServletRequest request) {
+    Integer profileid = HttpHeaderUtil.getId(request, ProfileRole.USER);
+        List<CommentDTO> ownComment = commentService.getOwnComment(profileid);
         return ResponseEntity.ok(ownComment);
     }
 

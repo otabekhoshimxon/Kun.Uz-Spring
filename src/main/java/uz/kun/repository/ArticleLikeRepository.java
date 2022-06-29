@@ -7,6 +7,7 @@ package uz.kun.repository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
 import uz.kun.entity.ArticleEntity;
 import uz.kun.entity.ArticleLikeEntity;
 import uz.kun.entity.ProfileEntity;
@@ -17,10 +18,10 @@ import java.util.Optional;
 
 public interface ArticleLikeRepository extends CrudRepository<ArticleLikeEntity, Integer> {
 
-    Optional<ArticleLikeEntity> findByArticleAndProfile(ArticleEntity article, ProfileEntity profile);
+   // Optional<ArticleLikeEntity> findByArticleAndProfile(ArticleEntity article, ProfileEntity profile);
 
-    @Query("FROM ArticleLikeEntity a where  a.article.id=:articleId and a.profile.id =:profileId")
-    Optional<ArticleLikeEntity> findExists(String articleId, Integer profileId);
+    @Query(value = "select * FROM article_like a where a.article_id =:a and a.profile_id =:b",nativeQuery = true)
+    Optional<ArticleLikeEntity> findExists(@Param("a") String articleId, @Param("b")Integer profileId);
 
     @Transactional
     @Modifying

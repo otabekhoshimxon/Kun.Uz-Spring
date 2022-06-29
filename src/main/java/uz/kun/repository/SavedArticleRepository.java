@@ -5,21 +5,16 @@ package uz.kun.repository;
 //Project Name :lesson_14_kun_uz
 
 
-import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
-import uz.kun.entity.ArticleEntity;
-import uz.kun.entity.SavedArticle;
-import uz.kun.enums.ArticleStatus;
+import uz.kun.entity.SavedArticleEntity;
 
-import javax.transaction.Transactional;
 import java.util.List;
-import java.util.Optional;
 
 
-public interface SavedArticleRepository extends CrudRepository<SavedArticle, Integer> {
+public interface SavedArticleRepository extends CrudRepository<SavedArticleEntity, Integer> {
 
 
-    @Query("from SavedArticle  where profile.id=?1")
-    List<SavedArticle> findByProfileId(Integer profileId);
+    @Query("from SavedArticleEntity  where profile.id=?1")
+    List<SavedArticleEntity> findByProfileId(Integer profileId);
 }

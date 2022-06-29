@@ -4,6 +4,7 @@ package uz.kun.controller;
 //Time :14:04
 //Project Name :Kun.uz
 
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,6 +19,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/saved_article")
+@Api(tags = "Saved controller ")
 public class SavedArticleController {
 
 

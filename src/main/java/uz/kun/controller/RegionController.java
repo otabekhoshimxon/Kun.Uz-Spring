@@ -1,5 +1,6 @@
 package uz.kun.controller;
 
+import io.swagger.annotations.Api;
 import uz.kun.dto.RegionCreateDto;
 import uz.kun.dto.RegionDto;
 import uz.kun.enums.Lang;
@@ -16,6 +17,7 @@ import java.util.List;
 
 @RequestMapping("/region")
 @RestController
+@Api(tags = "Region controller ")
 public class RegionController {
     @Autowired
     private RegionService regionService;

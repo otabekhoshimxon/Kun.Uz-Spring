@@ -19,7 +19,6 @@ import java.io.IOException;
 //Time :16:34
 //Project Name :Kun.uz
 @Component
-
 public class JwtFilter  extends GenericFilterBean {
 
 
@@ -42,8 +41,6 @@ public class JwtFilter  extends GenericFilterBean {
 
 
         try {
-
-
 
             String[] jwtArray = authorization.split(" ");
             if (jwtArray.length!=2)

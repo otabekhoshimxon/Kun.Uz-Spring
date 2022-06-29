@@ -20,7 +20,6 @@ public class JWTUtil {
 
         //optional - ixtiyoriy
         JwtBuilder jwtBuilder= Jwts.builder();
-
         jwtBuilder.setIssuedAt(Date.from(Instant.now()));//18:58:00  //start
         jwtBuilder.setExpiration(new Date(System.currentTimeMillis()+(60*60*1000)));//19:58:00 //end
         jwtBuilder.setIssuer("Ok");//creator //majburiy emas
@@ -37,7 +36,7 @@ public class JWTUtil {
         //optional - ixtiyoriy
         JwtBuilder jwtBuilder= Jwts.builder();
         jwtBuilder.setIssuedAt(Date.from(Instant.now()));//18:58:00  //start
-        jwtBuilder.setExpiration(new Date(System.currentTimeMillis()+(60*60*1000)));//19:58:00 //end
+        jwtBuilder.setExpiration(new Date(System.currentTimeMillis()+(60*60*1000)+20));//19:58:00 //end
         jwtBuilder.setIssuer("Ok");//creator //majburiy emas
         jwtBuilder.signWith(SignatureAlgorithm.HS256,KEY_SECURITY);//encode algorithm and secret key
         jwtBuilder.claim("id",id);//user id
@@ -80,7 +79,6 @@ public class JWTUtil {
                 .parseClaimsJws(token)
                 .getBody();
         Integer id = (Integer) claims.get("id");
-
         ProfileRole role1 = ProfileRole.valueOf((String) claims.get("role"));
         return new JwtDTO(id,role1);
     }

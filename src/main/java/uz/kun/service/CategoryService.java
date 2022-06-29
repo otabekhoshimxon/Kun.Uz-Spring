@@ -151,4 +151,13 @@ public class CategoryService {
         return dtoList;
 
     }
+
+    public CategoryEntity getByKey(String key) {
+
+        Optional<CategoryEntity> byKey = categoryRepository.findByKey(key);
+        if (byKey.isPresent()){
+            return byKey.get();
+        }
+return null;
+    }
 }

@@ -3,6 +3,7 @@ package uz.kun.entity;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 import uz.kun.enums.ArticleStatus;
 
@@ -12,6 +13,7 @@ import java.time.LocalDateTime;
 @Setter
 @Getter
 @Entity
+@ToString
 @Table(name = "article")
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ArticleEntity {
@@ -19,6 +21,7 @@ public class ArticleEntity {
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
     private String id;
+
 
     @Column(nullable = false, columnDefinition = "TEXT")
     private String title;
@@ -37,7 +40,7 @@ public class ArticleEntity {
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    private ArticleStatus status;
+    private ArticleStatus status=ArticleStatus.NOT_PUBLISHED;
 
     @Column(nullable = false)
     private Boolean visible = Boolean.TRUE;
@@ -64,9 +67,22 @@ public class ArticleEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     private CategoryEntity category;
 
+
+    @JoinColumn(name = "attach_id")
+    @OneToOne
+    private AttachEntity image;
+
     public ArticleEntity() {
     }
 
     public ArticleEntity(String articleId) {
+        this.id=articleId;
+    }
+
+    public ArticleEntity(String id, String title, String description, LocalDateTime publishDate) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.publishDate = publishDate;
     }
 }

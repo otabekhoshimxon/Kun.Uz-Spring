@@ -3,15 +3,11 @@ package uz.kun.util;//User :Lenovo
 //Time :6:36
 //Project Name :Kun.uzWithThymleaf
 
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
-import uz.kun.dto.ArticleDTO;
-import uz.kun.dto.CategoryDTO;
-import uz.kun.dto.ProfileDTO;
-import uz.kun.dto.RegionDto;
-import uz.kun.entity.ArticleEntity;
-import uz.kun.entity.CategoryEntity;
-import uz.kun.entity.ProfileEntity;
-import uz.kun.entity.RegionEntity;
+import uz.kun.dto.*;
+import uz.kun.entity.*;
+import uz.kun.mapper.ArticleShortInfoByCategory;
 
 @Component
 public  class Convertor{
@@ -19,10 +15,9 @@ public  class Convertor{
 
 
 
-    public ProfileDTO entityToDTO(ProfileEntity entity)
+    public static ProfileDTO entityToDTO(ProfileEntity entity)
     {
         ProfileDTO dto=new ProfileDTO();
-        dto.setPassword(entity.getPassword());
         dto.setRole(entity.getRole());
         dto.setName(entity.getName());
         dto.setSurname(entity.getSurname());
@@ -46,7 +41,7 @@ public  class Convertor{
 
     }
 
-    public ProfileEntity DTOToEntity(ProfileDTO dto) {
+    public  ProfileEntity DTOToEntity(ProfileDTO dto) {
         ProfileEntity entity=new ProfileEntity();
         entity.setPassword(dto.getPassword());
         entity.setRole(dto.getRole());
@@ -87,6 +82,14 @@ public  class Convertor{
         entity.setSharedCount(dto.getSharedCount());
         entity.setTitle(dto.getTitle());
         entity.setViewCount(dto.getViewCount());
+        entity.setDescription(dto.getDescription());
+
+        return entity;
+    }       public ArticleDTO  entityToDTO(ArticleShortInfoByCategory dto) {
+        ArticleDTO entity=new ArticleDTO();
+        entity.setPublishDate(dto.getPublish_date());
+        entity.setId(dto.getid());
+        entity.setTitle(dto.getTitle());
         entity.setDescription(dto.getDescription());
 
         return entity;
@@ -133,5 +136,16 @@ public  class Convertor{
         dto.setViewCount(article.getViewCount());
         dto.setDescription(article.getDescription());
         return dto;
+    }
+
+    public SmsDTO entityToDTO(SmsEntity smsEntity) {
+        SmsDTO smsDTO=new SmsDTO();
+        smsDTO.setCode(smsEntity.getCode());
+        smsDTO.setPhone(smsEntity.getPhone());
+        smsDTO.setStatus(smsEntity.isStatus());
+        smsDTO.setCreatedDate(smsEntity.getCreatedDate());
+        smsDTO.setId(smsDTO.getId());
+        return smsDTO;
+
     }
 }

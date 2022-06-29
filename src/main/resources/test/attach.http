@@ -1,0 +1,6 @@
+POST http://localhost:8080/attach/upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+Content-Disposition: form-data; name="file"; filename="pdp.jpg"
+
+/home/Lenovo/MY_PROJECTS/Kun.uz/src/main/resources/pdp.jpg

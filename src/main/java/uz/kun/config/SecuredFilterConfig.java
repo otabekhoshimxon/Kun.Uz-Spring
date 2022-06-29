@@ -16,7 +16,7 @@ import javax.persistence.*;
 public class SecuredFilterConfig {
 
     @Autowired
-    JwtFilter filter;
+   private JwtFilter filter;
 
 
     @Bean
@@ -25,7 +25,8 @@ public class SecuredFilterConfig {
         FilterRegistrationBean<JwtFilter> bean=new FilterRegistrationBean();
         bean.setFilter(filter);
         bean.addUrlPatterns("/profile/*");
-        bean.addUrlPatterns("/article/mod/*");
+        bean.addUrlPatterns("/auth/email/pagination");
+        bean.addUrlPatterns("/article/moderator/*");
         bean.addUrlPatterns("/comment/*");
         bean.addUrlPatterns("/category/adm/*");
         bean.addUrlPatterns("/article_like/*");

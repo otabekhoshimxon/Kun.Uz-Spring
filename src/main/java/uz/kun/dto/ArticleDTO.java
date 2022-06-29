@@ -26,6 +26,7 @@ public class ArticleDTO {
     private ProfileDTO publisher;
     private RegionDto region;
     private CategoryDTO category;
+    private ArticleLikeDTO like;
 
 
 }

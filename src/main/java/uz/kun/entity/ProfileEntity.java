@@ -1,7 +1,9 @@
 package uz.kun.entity;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import uz.kun.enums.ProfileRole;
 import uz.kun.enums.ProfileStatus;
 
@@ -25,8 +27,10 @@ public class ProfileEntity {
     @Column(nullable = false)
     private String surname;
 
-    @Column(nullable = false)
+    @Column
     private String email;
+    @Column
+    private String phone;
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
@@ -48,9 +52,17 @@ public class ProfileEntity {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "moderator")
     private List<ArticleEntity> articleList;
 
+
+
+    @OneToOne
+    @JoinColumn(name = "image_id")
+    private AttachEntity image;
+
+
     public ProfileEntity() {
     }
 
     public ProfileEntity(Integer pId) {
+        this.id = pId;
     }
 }

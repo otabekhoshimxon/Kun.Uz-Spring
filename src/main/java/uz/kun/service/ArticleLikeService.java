@@ -6,6 +6,7 @@ package uz.kun.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.validation.annotation.Validated;
 import uz.kun.entity.ArticleEntity;
 import uz.kun.entity.ArticleLikeEntity;
 import uz.kun.entity.ProfileEntity;
@@ -18,6 +19,7 @@ import java.util.Optional;
 
 
 @Service
+@Validated(ArticleLikeEntity.class)
 public class ArticleLikeService {
     @Autowired
     private ArticleLikeRepository articleLikeRepository;
@@ -49,6 +51,7 @@ public class ArticleLikeService {
         like.setArticle(new ArticleEntity(articleId));
         like.setProfile(new ProfileEntity(pId));
         like.setLikeStatus(status);
+        System.out.println(like);
         articleLikeRepository.save(like);
     }
 

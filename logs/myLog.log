@@ -1,0 +1,324 @@
+2022-06-29 06:36:40 [34mINFO [0;39m - uz.kun.Application - Starting Application using Java 17.0.2 on mx with PID 10821 (/home/Lenovo/MY_PROJECTS/Kun.uz/target/classes started by Lenovo in /home/Lenovo/MY_PROJECTS/Kun.uz)
+2022-06-29 06:36:40 [34mINFO [0;39m - uz.kun.Application - No active profile set, falling back to 1 default profile: "default"
+2022-06-29 06:36:41 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-29 06:36:41 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 57 ms. Found 15 JPA repository interfaces.
+2022-06-29 06:36:42 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-06-29 06:36:42 [34mINFO [0;39m - org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-06-29 06:36:42 [34mINFO [0;39m - org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-29 06:36:42 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-06-29 06:36:42 [34mINFO [0;39m - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1761 ms
+2022-06-29 06:36:42 [34mINFO [0;39m - org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-29 06:36:42 [34mINFO [0;39m - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-29 06:36:42 [34mINFO [0;39m - org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-29 06:36:42 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-06-29 06:36:42 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-06-29 06:36:42 [34mINFO [0;39m - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-06-29 06:36:43 [31mWARN [0;39m - org.hibernate.id.UUIDHexGenerator - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-06-29 06:36:43 [34mINFO [0;39m - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-29 06:36:43 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-29 06:36:45 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-29 06:36:46 [34mINFO [0;39m - uz.kun.Application - Started Application in 6.176 seconds (JVM running for 6.906)
+2022-06-29 06:36:49 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-29 06:36:49 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-06-29 06:36:49 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-06-29 06:44:29 [34mINFO [0;39m - uz.kun.Application - Starting Application using Java 17.0.2 on mx with PID 10977 (/home/Lenovo/MY_PROJECTS/Kun.uz/target/classes started by Lenovo in /home/Lenovo/MY_PROJECTS/Kun.uz)
+2022-06-29 06:44:29 [34mINFO [0;39m - uz.kun.Application - No active profile set, falling back to 1 default profile: "default"
+2022-06-29 06:44:30 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-29 06:44:30 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 15 JPA repository interfaces.
+2022-06-29 06:44:31 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-06-29 06:44:31 [34mINFO [0;39m - org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-06-29 06:44:31 [34mINFO [0;39m - org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-29 06:44:31 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-06-29 06:44:31 [34mINFO [0;39m - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2357 ms
+2022-06-29 06:44:31 [34mINFO [0;39m - org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-29 06:44:31 [34mINFO [0;39m - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-29 06:44:31 [34mINFO [0;39m - org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-29 06:44:32 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-06-29 06:44:32 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-06-29 06:44:32 [34mINFO [0;39m - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-06-29 06:44:32 [31mWARN [0;39m - org.hibernate.id.UUIDHexGenerator - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-06-29 06:44:33 [34mINFO [0;39m - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-29 06:44:33 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-29 06:44:34 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-29 06:44:35 [34mINFO [0;39m - uz.kun.Application - Started Application in 7.132 seconds (JVM running for 8.086)
+2022-06-29 06:45:40 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-29 06:45:40 [34mINFO [0;39m - org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-06-29 06:45:40 [34mINFO [0;39m - org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-06-29 06:49:05 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-29 06:49:05 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-06-29 06:49:05 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-06-29 06:49:12 [34mINFO [0;39m - uz.kun.Application - Starting Application using Java 17.0.2 on mx with PID 11147 (/home/Lenovo/MY_PROJECTS/Kun.uz/target/classes started by Lenovo in /home/Lenovo/MY_PROJECTS/Kun.uz)
+2022-06-29 06:49:12 [34mINFO [0;39m - uz.kun.Application - No active profile set, falling back to 1 default profile: "default"
+2022-06-29 06:49:13 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-29 06:49:13 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 15 JPA repository interfaces.
+2022-06-29 06:49:14 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-06-29 06:49:14 [34mINFO [0;39m - org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-06-29 06:49:14 [34mINFO [0;39m - org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-29 06:49:14 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-06-29 06:49:14 [34mINFO [0;39m - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1887 ms
+2022-06-29 06:49:14 [34mINFO [0;39m - org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-29 06:49:14 [34mINFO [0;39m - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-29 06:49:14 [34mINFO [0;39m - org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-29 06:49:14 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-06-29 06:49:15 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-06-29 06:49:15 [34mINFO [0;39m - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-06-29 06:49:15 [31mWARN [0;39m - org.hibernate.id.UUIDHexGenerator - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-06-29 06:49:16 [34mINFO [0;39m - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-29 06:49:16 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-29 06:49:17 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-29 06:49:18 [34mINFO [0;39m - uz.kun.Application - Started Application in 6.766 seconds (JVM running for 7.625)
+2022-06-29 06:49:22 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-29 06:49:22 [34mINFO [0;39m - org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-06-29 06:49:22 [34mINFO [0;39m - org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-06-29 06:50:51 [34mINFO [0;39m - uz.kun.controller.ArticleController - Get 4 Most Read Articles : [ArticleDTO(id=ff80808181580573018158058db70000, title=Dolzarb yangilik, content=null, description=yana gap, viewCount=null, sharedCount=null, status=null, visible=true, createdDate=2022-06-29T06:50:51.957613172, publishDate=2022-06-14T22:44:37.308683, moderator=null, publisher=null, region=null, category=null, like=null), ArticleDTO(id=ff8080818158086301815808ca2c0000, title=Ҳаммаси паролга бориб тақалади: Интернетдаги фирибгарликнинг янги турлари, content=null, description=Технологиялар ривожлангани сари фирибгарликнинг янгидан янги турлари пайдо бўлмоқда. Шулардан энг кенг тарқалгани – киберфирибгарликдир. Охирги 3 йилда бу турдаги жиноятлар сони 8 баробарга кўпайган.
+
+Кўп ҳолатларда фуқаролар ҳушёр бўлмагани сабабли ҳам фирибгарлар бундан устомонлик билан фойдаланмоқда. Қуйида ҳозирги кунда кенг тарқалган киберфирибгарлик турлари ва улардан ҳимояланиш ҳақида маълумот берамиз.
+
+, viewCount=null, sharedCount=null, status=null, visible=true, createdDate=2022-06-29T06:50:51.957645800, publishDate=2022-06-12T18:09:39.987936, moderator=null, publisher=null, region=null, category=null, like=null), ArticleDTO(id=ff808081816db49301816db820590000, title=Уруш дунёни қандай қашшоқлаштиради: 10 та факт ва прогноз, content=null, description= Жаҳон банки ҳамда Иқтисодий ҳамкорлик ва тараққиёт ташкилоти (OECD) ўзларининг ярим йиллик прогнозларида глобал иқтисодиёт истиқболлари ҳақидаги оптимистик қарашларини қайта кўриб чиқди. Қайд этилишича, иқтисодий пасайиш хавфи ҳар қачонгидан ҳам юқори даражага етган.
+
+“Дунё Россиянинг Украинага қарши ҳарбий ҳаракатлари учун катта товон тўлайди. Уруш икки йиллик пандемия давридан кейин бошланган иқтисодий тикланишга таҳдид солади. Шубҳасиз, энг қашшоқ давлатлар бошқалардан кўра кўпроқ жабр кўради”, – дейилади OECD ҳисоботида.
+
+“Россиянинг Украинага бостириб кириши жаҳон иқтисодиётига жиддий зарар етказди, энергия бозорларини беқарорлаштирди, кўплаб ривожланаётган мамлакатларда озиқ-овқат танқислиги ва қашшоқликни кучайтирди”, дея ёзади Жаҳон банки иқтисодчилари.
+
+BBC бу икки ташкилот эълон қилган охирги ҳисоботлар асосида Россиянинг Украинага бостириб кириши жаҳон иқтисодиётига қандай зарар етказиши мумкинлиги борасида 10 та факт ва прогнозларни келтириб ўтди., viewCount=null, sharedCount=null, status=null, visible=true, createdDate=2022-06-29T06:50:51.957657980, publishDate=2022-06-16T23:14:00.579417, moderator=null, publisher=null, region=null, category=null, like=null), ArticleDTO(id=ff808081816d72e201816d9840800000, title=Ўзбекистонда энг кўп коррупция Тошкент шаҳрида экани маълум қилинди, content=null, description=Бурҳоновга кўра, Тошкент шаҳрида 2021 йил давомида 184 та коррупцион жиноят содир этилган бўлиб, бу жиноятлар оқибатида давлат ва жамият манфаатларига 82 млрд 638 млн сўмлик моддий зарар етказилган.
+
+Пойтахтда коррупцияга оид жиноятлар бўйича энг юқори кўрсаткич Учтепа (33), Миробод (25), Чилонзор (20), Мирзо Улуғбек (20) ва Яшнобод (18) туманларига тўғри келади.
+
+“Шаҳар коррупцияга оид жиноятлар содир қилиш кўрсаткичи бўйича ўтган 3 ойда (февраль-апрель) республикада энг юқори ўринларни эгаллаб турибди. Хусусан, февраль ойида 37 та, ва март ойида 50 та жиноят иши билан 2-ўринни эгаллаган бўлса, апрель ойида 69 та жиноят иши билан 1-ўринни эгаллади., viewCount=null, sharedCount=null, status=null, visible=true, createdDate=2022-06-29T06:50:51.957668220, publishDate=2022-06-16T22:43:11.210472, moderator=null, publisher=null, region=null, category=null, like=null)]
+2022-06-29 06:52:23 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-29 06:52:23 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-06-29 06:52:23 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-06-29 06:52:31 [34mINFO [0;39m - uz.kun.Application - Starting Application using Java 17.0.2 on mx with PID 11307 (/home/Lenovo/MY_PROJECTS/Kun.uz/target/classes started by Lenovo in /home/Lenovo/MY_PROJECTS/Kun.uz)
+2022-06-29 06:52:31 [34mINFO [0;39m - uz.kun.Application - No active profile set, falling back to 1 default profile: "default"
+2022-06-29 06:52:32 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-29 06:52:32 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 15 JPA repository interfaces.
+2022-06-29 06:52:33 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-06-29 06:52:33 [34mINFO [0;39m - org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-06-29 06:52:33 [34mINFO [0;39m - org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-29 06:52:33 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-06-29 06:52:33 [34mINFO [0;39m - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2005 ms
+2022-06-29 06:52:33 [34mINFO [0;39m - org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-29 06:52:33 [34mINFO [0;39m - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-29 06:52:33 [34mINFO [0;39m - org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-29 06:52:33 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-06-29 06:52:34 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-06-29 06:52:34 [34mINFO [0;39m - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-06-29 06:52:34 [31mWARN [0;39m - org.hibernate.id.UUIDHexGenerator - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-06-29 06:52:35 [34mINFO [0;39m - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-29 06:52:35 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-29 06:52:36 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-29 06:52:37 [34mINFO [0;39m - uz.kun.Application - Started Application in 6.47 seconds (JVM running for 7.429)
+2022-06-29 06:52:39 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-29 06:52:39 [34mINFO [0;39m - org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-06-29 06:52:39 [34mINFO [0;39m - org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-06-29 06:52:39 [34mINFO [0;39m - uz.kun.controller.ArticleController - Getting 4 Most Read Articles 
+2022-06-29 07:03:56 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-29 07:03:56 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-06-29 07:03:56 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-06-29 07:04:06 [34mINFO [0;39m - uz.kun.Application - Starting Application using Java 17.0.2 on mx with PID 11548 (/home/Lenovo/MY_PROJECTS/Kun.uz/target/classes started by Lenovo in /home/Lenovo/MY_PROJECTS/Kun.uz)
+2022-06-29 07:04:06 [34mINFO [0;39m - uz.kun.Application - No active profile set, falling back to 1 default profile: "default"
+2022-06-29 07:04:07 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-29 07:04:07 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 15 JPA repository interfaces.
+2022-06-29 07:04:08 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-06-29 07:04:08 [34mINFO [0;39m - org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-06-29 07:04:08 [34mINFO [0;39m - org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-29 07:04:08 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-06-29 07:04:08 [34mINFO [0;39m - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1911 ms
+2022-06-29 07:04:08 [34mINFO [0;39m - org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-29 07:04:08 [34mINFO [0;39m - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-29 07:04:08 [34mINFO [0;39m - org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-29 07:04:08 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-06-29 07:04:09 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-06-29 07:04:09 [34mINFO [0;39m - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-06-29 07:04:09 [31mWARN [0;39m - org.hibernate.id.UUIDHexGenerator - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-06-29 07:04:10 [34mINFO [0;39m - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-29 07:04:10 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-29 07:04:11 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-29 07:04:12 [34mINFO [0;39m - uz.kun.Application - Started Application in 6.303 seconds (JVM running for 7.344)
+2022-06-29 07:04:16 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-29 07:04:16 [34mINFO [0;39m - org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-06-29 07:04:16 [34mINFO [0;39m - org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-06-29 07:06:09 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-29 07:06:09 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-06-29 07:06:09 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-06-29 07:06:16 [34mINFO [0;39m - uz.kun.Application - Starting Application using Java 17.0.2 on mx with PID 11685 (/home/Lenovo/MY_PROJECTS/Kun.uz/target/classes started by Lenovo in /home/Lenovo/MY_PROJECTS/Kun.uz)
+2022-06-29 07:06:16 [34mINFO [0;39m - uz.kun.Application - No active profile set, falling back to 1 default profile: "default"
+2022-06-29 07:06:17 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-29 07:06:18 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 98 ms. Found 15 JPA repository interfaces.
+2022-06-29 07:06:18 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-06-29 07:06:18 [34mINFO [0;39m - org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-06-29 07:06:18 [34mINFO [0;39m - org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-29 07:06:18 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-06-29 07:06:18 [34mINFO [0;39m - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2275 ms
+2022-06-29 07:06:18 [34mINFO [0;39m - org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-29 07:06:18 [34mINFO [0;39m - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-29 07:06:18 [34mINFO [0;39m - org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-29 07:06:18 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-06-29 07:06:19 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-06-29 07:06:19 [34mINFO [0;39m - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-06-29 07:06:19 [31mWARN [0;39m - org.hibernate.id.UUIDHexGenerator - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-06-29 07:06:20 [34mINFO [0;39m - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-29 07:06:20 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-29 07:06:22 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-29 07:06:23 [34mINFO [0;39m - uz.kun.Application - Started Application in 7.616 seconds (JVM running for 8.566)
+2022-06-29 07:07:14 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-29 07:07:14 [34mINFO [0;39m - org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-06-29 07:07:14 [34mINFO [0;39m - org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-06-29 07:07:14 [34mINFO [0;39m - uz.kun.controller.AuthController - Request for registration RegistrationDTO(name=Akbar, surname=Abdurahmonov, email=String, phone=998999994402, password=12345)
+2022-06-29 07:07:57 [34mINFO [0;39m - uz.kun.controller.AuthController - Request for registration RegistrationDTO(name=Akbar, surname=Abdurahmonov1, email=String, phone=998909470962, password=12345)
+2022-06-29 07:08:06 [34mINFO [0;39m - uz.kun.controller.AuthController - Request for registration RegistrationDTO(name=Akbar1, surname=Abdurahmonov1, email=String, phone=998909470962, password=12345)
+2022-06-29 07:08:37 [34mINFO [0;39m - uz.kun.controller.AuthController - Request for registration RegistrationDTO(name=Akbar1, surname=Abdurahmonov1, email=String, phone=998909470962, password=12345)
+2022-06-29 07:09:17 [34mINFO [0;39m - uz.kun.controller.AuthController - Request for verification VerificationDTO(code=79674, phone=998909470962)
+2022-06-29 07:09:48 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-29 07:09:48 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-06-29 07:09:48 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-06-29 13:56:56 [34mINFO [0;39m - uz.kun.Application - Starting Application using Java 17.0.2 on mx with PID 383 (/home/Lenovo/MY_PROJECTS/Kun.uz/target/classes started by Lenovo in /home/Lenovo/MY_PROJECTS/Kun.uz)
+2022-06-29 13:56:56 [34mINFO [0;39m - uz.kun.Application - No active profile set, falling back to 1 default profile: "default"
+2022-06-29 13:57:01 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-29 13:57:01 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 84 ms. Found 15 JPA repository interfaces.
+2022-06-29 13:57:03 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-06-29 13:57:03 [34mINFO [0;39m - org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-06-29 13:57:03 [34mINFO [0;39m - org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-29 13:57:03 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-06-29 13:57:03 [34mINFO [0;39m - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6025 ms
+2022-06-29 13:57:03 [34mINFO [0;39m - org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-29 13:57:03 [34mINFO [0;39m - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-29 13:57:06 [34mINFO [0;39m - org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-29 13:57:07 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-06-29 13:57:07 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-06-29 13:57:07 [34mINFO [0;39m - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-06-29 13:57:07 [31mWARN [0;39m - org.hibernate.id.UUIDHexGenerator - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-06-29 13:57:09 [34mINFO [0;39m - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-29 13:57:09 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-29 13:57:12 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-29 13:57:12 [34mINFO [0;39m - uz.kun.Application - Started Application in 17.184 seconds (JVM running for 22.544)
+2022-06-29 13:59:45 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-29 13:59:45 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-06-29 13:59:45 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-06-29 13:59:54 [34mINFO [0;39m - uz.kun.Application - Starting Application using Java 17.0.2 on mx with PID 604 (/home/Lenovo/MY_PROJECTS/Kun.uz/target/classes started by Lenovo in /home/Lenovo/MY_PROJECTS/Kun.uz)
+2022-06-29 13:59:54 [34mINFO [0;39m - uz.kun.Application - No active profile set, falling back to 1 default profile: "default"
+2022-06-29 13:59:55 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-29 13:59:55 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 57 ms. Found 15 JPA repository interfaces.
+2022-06-29 13:59:56 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-06-29 13:59:56 [34mINFO [0;39m - org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-06-29 13:59:56 [34mINFO [0;39m - org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-29 13:59:56 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-06-29 13:59:56 [34mINFO [0;39m - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1834 ms
+2022-06-29 13:59:56 [34mINFO [0;39m - org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-29 13:59:56 [34mINFO [0;39m - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-29 13:59:56 [34mINFO [0;39m - org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-29 13:59:56 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-06-29 13:59:57 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-06-29 13:59:57 [34mINFO [0;39m - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-06-29 13:59:57 [31mWARN [0;39m - org.hibernate.id.UUIDHexGenerator - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-06-29 13:59:58 [34mINFO [0;39m - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-29 13:59:58 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-29 13:59:59 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-29 14:00:00 [34mINFO [0;39m - uz.kun.Application - Started Application in 6.447 seconds (JVM running for 7.319)
+2022-06-29 14:00:20 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-29 14:00:20 [34mINFO [0;39m - org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-06-29 14:00:20 [34mINFO [0;39m - org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2022-06-29 14:07:03 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-29 14:07:03 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-06-29 14:07:03 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-06-29 14:07:09 [34mINFO [0;39m - uz.kun.Application - Starting Application using Java 17.0.2 on mx with PID 872 (/home/Lenovo/MY_PROJECTS/Kun.uz/target/classes started by Lenovo in /home/Lenovo/MY_PROJECTS/Kun.uz)
+2022-06-29 14:07:09 [34mINFO [0;39m - uz.kun.Application - No active profile set, falling back to 1 default profile: "default"
+2022-06-29 14:07:10 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-29 14:07:10 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 55 ms. Found 15 JPA repository interfaces.
+2022-06-29 14:07:11 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-06-29 14:07:11 [34mINFO [0;39m - org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-06-29 14:07:11 [34mINFO [0;39m - org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-29 14:07:11 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-06-29 14:07:11 [34mINFO [0;39m - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1702 ms
+2022-06-29 14:07:11 [34mINFO [0;39m - org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-29 14:07:11 [34mINFO [0;39m - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-29 14:07:11 [34mINFO [0;39m - org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-29 14:07:11 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-06-29 14:07:11 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-06-29 14:07:12 [34mINFO [0;39m - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-06-29 14:07:12 [31mWARN [0;39m - org.hibernate.id.UUIDHexGenerator - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-06-29 14:07:12 [34mINFO [0;39m - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-29 14:07:12 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-29 14:07:14 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-29 14:07:14 [34mINFO [0;39m - uz.kun.Application - Started Application in 5.698 seconds (JVM running for 6.54)
+2022-06-29 14:07:29 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-29 14:07:29 [34mINFO [0;39m - org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-06-29 14:07:29 [34mINFO [0;39m - org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2022-06-29 14:21:34 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-29 14:21:34 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-06-29 14:21:34 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-06-29 14:21:41 [34mINFO [0;39m - uz.kun.Application - Starting Application using Java 17.0.2 on mx with PID 1060 (/home/Lenovo/MY_PROJECTS/Kun.uz/target/classes started by Lenovo in /home/Lenovo/MY_PROJECTS/Kun.uz)
+2022-06-29 14:21:41 [34mINFO [0;39m - uz.kun.Application - No active profile set, falling back to 1 default profile: "default"
+2022-06-29 14:21:42 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-29 14:21:42 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 55 ms. Found 15 JPA repository interfaces.
+2022-06-29 14:21:43 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-06-29 14:21:43 [34mINFO [0;39m - org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-06-29 14:21:43 [34mINFO [0;39m - org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-29 14:21:43 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-06-29 14:21:43 [34mINFO [0;39m - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1777 ms
+2022-06-29 14:21:43 [34mINFO [0;39m - org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-29 14:21:43 [34mINFO [0;39m - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-29 14:21:43 [34mINFO [0;39m - org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-29 14:21:43 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-06-29 14:21:44 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-06-29 14:21:44 [34mINFO [0;39m - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-06-29 14:21:44 [31mWARN [0;39m - org.hibernate.id.UUIDHexGenerator - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-06-29 14:21:45 [34mINFO [0;39m - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-29 14:21:45 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-29 14:21:46 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-29 14:21:47 [34mINFO [0;39m - uz.kun.Application - Started Application in 5.901 seconds (JVM running for 6.736)
+2022-06-29 14:23:31 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-29 14:23:31 [34mINFO [0;39m - org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-06-29 14:23:31 [34mINFO [0;39m - org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-06-29 14:30:40 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-29 14:30:40 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-06-29 14:30:40 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-06-29 14:30:48 [34mINFO [0;39m - uz.kun.Application - Starting Application using Java 17.0.2 on mx with PID 1240 (/home/Lenovo/MY_PROJECTS/Kun.uz/target/classes started by Lenovo in /home/Lenovo/MY_PROJECTS/Kun.uz)
+2022-06-29 14:30:48 [34mINFO [0;39m - uz.kun.Application - No active profile set, falling back to 1 default profile: "default"
+2022-06-29 14:30:49 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-29 14:30:49 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 57 ms. Found 15 JPA repository interfaces.
+2022-06-29 14:30:50 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-06-29 14:30:50 [34mINFO [0;39m - org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-06-29 14:30:50 [34mINFO [0;39m - org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-29 14:30:50 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-06-29 14:30:50 [34mINFO [0;39m - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1659 ms
+2022-06-29 14:30:50 [34mINFO [0;39m - org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-29 14:30:50 [34mINFO [0;39m - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-29 14:30:50 [34mINFO [0;39m - org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-29 14:30:50 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-06-29 14:30:50 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-06-29 14:30:50 [34mINFO [0;39m - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-06-29 14:30:50 [31mWARN [0;39m - org.hibernate.id.UUIDHexGenerator - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-06-29 14:30:51 [34mINFO [0;39m - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-29 14:30:51 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-29 14:30:52 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-29 14:30:53 [34mINFO [0;39m - uz.kun.Application - Started Application in 5.685 seconds (JVM running for 6.433)
+2022-06-29 14:31:18 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-29 14:31:18 [34mINFO [0;39m - org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-06-29 14:31:18 [34mINFO [0;39m - org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2022-06-29 14:39:17 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-29 14:39:17 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-06-29 14:39:17 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-06-29 14:39:27 [34mINFO [0;39m - uz.kun.Application - Starting Application using Java 17.0.2 on mx with PID 1471 (/home/Lenovo/MY_PROJECTS/Kun.uz/target/classes started by Lenovo in /home/Lenovo/MY_PROJECTS/Kun.uz)
+2022-06-29 14:39:27 [34mINFO [0;39m - uz.kun.Application - No active profile set, falling back to 1 default profile: "default"
+2022-06-29 14:39:28 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-29 14:39:28 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 15 JPA repository interfaces.
+2022-06-29 14:39:29 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-06-29 14:39:29 [34mINFO [0;39m - org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-06-29 14:39:29 [34mINFO [0;39m - org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-29 14:39:29 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-06-29 14:39:29 [34mINFO [0;39m - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1687 ms
+2022-06-29 14:39:29 [34mINFO [0;39m - org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-29 14:39:29 [34mINFO [0;39m - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-29 14:39:29 [34mINFO [0;39m - org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-29 14:39:29 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-06-29 14:39:29 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-06-29 14:39:29 [34mINFO [0;39m - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-06-29 14:39:29 [31mWARN [0;39m - org.hibernate.id.UUIDHexGenerator - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-06-29 14:39:30 [34mINFO [0;39m - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-29 14:39:30 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-29 14:39:31 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-29 14:39:32 [34mINFO [0;39m - uz.kun.Application - Started Application in 5.616 seconds (JVM running for 6.479)
+2022-06-29 15:35:03 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-29 15:35:03 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-06-29 15:35:03 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

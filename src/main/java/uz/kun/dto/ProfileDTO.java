@@ -13,6 +13,7 @@ public class ProfileDTO {
     private String email;
     private ProfileRole role;
     private String password;
-    private String jwt;
+    private String Authorization;
+
 
 }

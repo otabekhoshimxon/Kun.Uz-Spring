@@ -7,12 +7,14 @@ package uz.kun.dto;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Data
 public class SavedArticleDTO {
 
 
     private ArticleDTO articleDTO;
+    private LocalDateTime createdDate=LocalDateTime.now();
 
 
 }

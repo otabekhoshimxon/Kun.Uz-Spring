@@ -13,6 +13,9 @@ public class ArticleLikeDTO {
 
     private String articleId;
 
+    private Integer likeCount=0;
+    private Integer disLikeCount=0;
+
 
 
 }

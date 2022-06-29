@@ -4,6 +4,7 @@ package uz.kun.controller;
 //Time :19:18
 //Project Name :Kun.uz
 
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,6 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 
 @RequestMapping("/comment_like")
 @RestController
+@Api(tags = "Comment Like Controller ")
 public class CommentLikeController {
 
 

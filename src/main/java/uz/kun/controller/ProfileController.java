@@ -1,6 +1,9 @@
 package uz.kun.controller;
+import io.swagger.annotations.Api;
 import org.springframework.data.domain.PageImpl;
+import org.springframework.web.multipart.MultipartFile;
 import uz.kun.dto.ProfileDTO;
+import uz.kun.dto.ProfileFilterDTO;
 import uz.kun.enums.ProfileRole;
 import uz.kun.service.ProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +15,9 @@ import uz.kun.util.JWTUtil;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-@RequestMapping("")
+@RequestMapping("/profile")
 @RestController
+@Api(tags = "Profile controller ")
 public class ProfileController {
     @Autowired
     private ProfileService profileService;
@@ -64,4 +68,21 @@ public class ProfileController {
     }
 
     ///////////////////////////////////////////////////
+
+    @PostMapping("/updateImage/{image}")
+    public ResponseEntity<?> updateImage( HttpServletRequest request, @PathVariable("image") String imageId) {
+        Integer id = HttpHeaderUtil.getId(request, ProfileRole.USER);
+        profileService.updateImage(id,imageId);
+        return ResponseEntity.ok().body("ok");
+    }
+
+    ///////////////////////////////////////////////////
+
+    @PostMapping("/filter")
+    public ResponseEntity<?> updateImage(HttpServletRequest request, @RequestBody ProfileFilterDTO filterDTO) {
+        HttpHeaderUtil.getId(request, ProfileRole.ADMIN);
+        List<ProfileDTO> filter = profileService.filter(filterDTO);
+        return ResponseEntity.ok().body(filter);
+    }
+
 }
