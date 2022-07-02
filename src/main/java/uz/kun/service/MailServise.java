@@ -5,6 +5,7 @@ package uz.kun.service;
 //Project Name :Kun.uz
 
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
@@ -26,6 +27,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Service
+@Slf4j
 public class MailServise {
     @Autowired
     private EmailHistoryRepository emailHistoryRepository;
@@ -36,18 +38,6 @@ public class MailServise {
     @Value("${url2}")
     private String serverUrl;
 
-/*    public void sendRegistrationEmail(String toAccount,Integer id) {
-//        String message = "Your Activation lin: adsdasdasdasda";
-//        sendSimpleEmail(toAccount, "Registration", message);
-        StringBuilder builder = new StringBuilder();
-        builder.append("<h1 style='align-text:center'>Salom Jiga Qalaysan</h1>");
-        builder.append("<b>Mazgi</b>");
-        builder.append("<p> <a href='http://localhost:8081/attach/open/123'>Link verification</a> </p>");
-        sendEmail(toAccount, "Registration", builder.toString());
-    }
-
-
-    */
 
     public void sendRegistrationEmail(String toAccount, Integer id) {
         String encode = JWTUtil.encode(id);
@@ -63,6 +53,7 @@ public class MailServise {
         builder.append("</p>");
         builder.append("<br>");
 
+        log.info("Send message email to {}" ,toAccount,builder.toString());
         sendEmail(toAccount, " Ro'yxatdan o'tish ", builder.toString());
     }
 
